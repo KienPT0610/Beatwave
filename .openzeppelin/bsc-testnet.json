@@ -1,0 +1,116 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xD568e9628dD89AE8F455171E244Ef746B429318b",
+      "txHash": "0x6195c38f076493f4a1d9ab7b13d9749361401990c9cbaed114b51717d48f45ae",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "a455448f7e6a59572fc658f12c5bbd4a5bcc02cb750eea33b64ae534e8629cd9": {
+      "address": "0xDe364eCF7FA65ac5E72B70B353a5841eBA10659D",
+      "txHash": "0xe9b7b4544f8d26881ba2bc831fab2f5898b060b2da4a5f11035acc49bd88a2ff",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "beatCountId",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:21"
+          },
+          {
+            "label": "beats",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Beat)920_storage)",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:24"
+          },
+          {
+            "label": "admin",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:77"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Beat)920_storage)": {
+            "label": "mapping(uint256 => struct BeatWave.Beat)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Beat)920_storage": {
+            "label": "struct BeatWave.Beat",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "cid",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isForSale",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "uploadTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "numberOfLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    }
+  }
+}

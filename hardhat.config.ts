@@ -14,6 +14,26 @@ const config: HardhatUserConfig = {
       }
     }
   },
+  gasReporter: {
+    enabled: Boolean(process.env.REPORT_GAS) || true,
+  },
+
+  sourcify: {
+    enabled: true,
+  },
+
+  networks: {
+    bscTestnet: {
+      url: process.env.BSC_TESTNET_RPC_URL || "",
+      accounts: [process.env.DEPLOYER_PRIVATE_KEY || ""],
+    },
+  }, 
+
+  etherscan: {
+    apiKey: {
+      bscTestnet: process.env.BSCSCAN_API_KEY || "",
+    },
+  },
 };
 
 export default config;
