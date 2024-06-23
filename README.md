@@ -11,3 +11,6 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.ts
 ```
+```shell
+    proxy address: 0xD568e9628dD89AE8F455171E244Ef746B429318b
+```
