@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-contract BeatWave {
+import '@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol';
+
+contract BeatWave is UUPSUpgradeable {
     //Struct lưu thông tin beat
     struct Beat {
         address owner; //Người sở hữu
@@ -63,6 +65,21 @@ contract BeatWave {
     to: người sở hữu mới
     */
     event Transfer(uint id, address indexed from, address indexed to);
+
+    //To UUPS
+    address public admin;
+    modifier onlyAdmin() {
+        require(msg.sender == admin, "you are not admin");
+        _;
+    }
+
+    function _authorizeUpgrade(
+        address newImplement
+    ) internal override onlyAdmin {}
+
+    function initialize(address _admin) public {
+        admin = _admin;
+    } 
 
     //Kiểm tra người gọi có phải là chủ sở hữu beat không
     modifier onlyOwner(uint256 id) {
