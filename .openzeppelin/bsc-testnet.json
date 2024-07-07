@@ -111,6 +111,214 @@
         },
         "namespaces": {}
       }
+    },
+    "042f11414942412e3126b6fcbcd0845b3d31a8ee5fd529a4be51669e7f2f3b25": {
+      "address": "0x551189eAE6a64A649c8BFAE60e3D453e0a0C67d2",
+      "txHash": "0x72f6abd906db515f3b763ab351602b1db0ae2cdfb29496e59afd286f2234b1c0",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "beatCountId",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:21"
+          },
+          {
+            "label": "beats",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Beat)920_storage)",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:24"
+          },
+          {
+            "label": "admin",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:77"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Beat)920_storage)": {
+            "label": "mapping(uint256 => struct BeatWave.Beat)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Beat)920_storage": {
+            "label": "struct BeatWave.Beat",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "cid",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isForSale",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "uploadTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "numberOfLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "beb4c384b76cfc87a26655b13ba15596a1bff3c599ec0e100c9f46978ebe240a": {
+      "address": "0xD650b04ABc47CB2476F3039f79Da6Ed36c05D128",
+      "txHash": "0x2dbb8cd283bee7d9a0e4f9ac4e4fc06b19dc8c191104c24159cc353f0923e87f",
+      "layout": {
+        "solcVersion": "0.8.24",
+        "storage": [
+          {
+            "label": "beatCountId",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:21"
+          },
+          {
+            "label": "beats",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Beat)920_storage)",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:24"
+          },
+          {
+            "label": "admin",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address",
+            "contract": "BeatWave",
+            "src": "contracts\\BeatWave.sol:77"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_uint256,t_struct(Beat)920_storage)": {
+            "label": "mapping(uint256 => struct BeatWave.Beat)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Beat)920_storage": {
+            "label": "struct BeatWave.Beat",
+            "members": [
+              {
+                "label": "owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "cid",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "isForSale",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "uploadTimestamp",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "numberOfLikes",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
     }
   }
 }
