@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import '@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol';
+import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 
 contract BeatWave is UUPSUpgradeable {
     //Struct lưu thông tin beat
@@ -79,7 +79,7 @@ contract BeatWave is UUPSUpgradeable {
 
     function initialize(address _admin) public {
         admin = _admin;
-    } 
+    }
 
     //Kiểm tra người gọi có phải là chủ sở hữu beat không
     modifier onlyOwner(uint256 id) {
@@ -189,5 +189,17 @@ contract BeatWave is UUPSUpgradeable {
         address owner = beats[_id].owner;
         beats[_id].owner = newOwner;
         emit Transfer(_id, owner, newOwner);
+    }
+
+    /** Version 2 **/
+
+    /*
+    * Hàm thay đổi title của beat
+    */
+    function changeTitle(
+        uint256 _id,
+        string memory newTitle
+    ) public onlyOwner(_id) {
+        beats[_id].title = newTitle;
     }
 }

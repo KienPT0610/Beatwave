@@ -204,5 +204,18 @@ describe("BeatWave contract", () => {
         .to.emit(beatWave, "Transfer")
         .withArgs(1, acc1.address, acc2.address);
     });
+
+    it('should change title beat', async () => {
+      const { beatWave, acc1, acc2 } = await loadFixture(
+        deployBeatWaveContract
+      );
+      
+      await beatWave.uploadBeat("cid123", "My beat", ethers.parseEther("1"));
+      const tx = await beatWave.changeTitle(1, 'New title');
+      
+      const beat = await beatWave.beats(1);
+      
+      expect(beat.title).to.equal('New title');
+    });
   });
 });
