@@ -230,6 +230,7 @@ contract BeatWave is
         transfer(owner, amount);
     }
 
+    // #version 4
     /*
     delete beat of owner or admin
     */
@@ -243,10 +244,10 @@ contract BeatWave is
     /*
     function to burn beat id for admin 
     */
-   function burnBeats(uint _id) public onlyAdmin {
+    function burnBeats(uint _id) public onlyAdmin {
         beats[_id].cid = "";
         beats[_id].title = "";
         beats[_id].isForSale = false;
         beats[_id].owner = address(0);
-   }
+    }
 }
